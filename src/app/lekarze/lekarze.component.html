@@ -1,0 +1,40 @@
+<input
+type="text"
+placeholder="Szukaj lekarza"
+class="form-control bg-dark text-light border-0 my-4 text-center"
+autofocus
+(keyup)="szukaj()"
+[(ngModel)]="szuakny_text"
+/>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>Specjalizacja</th>
+            <th>Nr.Telefonu</th>
+        </tr>
+      
+    </thead>
+    <tbody>
+        <tr *ngFor="let lekarze of filter"> 
+            <td>
+              {{ lekarze.id_lekarza}}
+            </td>
+            <td>
+                {{ lekarze.imie_lekarza}}
+              </td>
+              <td>
+                {{ lekarze.naz_lekarza}}
+              </td>
+              <td>
+                {{ lekarze.spec_lekarza}}
+              </td>
+              <td>
+                {{ lekarze.telefon_lekarza}}
+              </td>
+          </tr>
+    </tbody>
+</table>
