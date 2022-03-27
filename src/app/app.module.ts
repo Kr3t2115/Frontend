@@ -10,6 +10,13 @@ import { PacjenciComponent } from './pacjenci/pacjenci.component';
 import { ReceptyComponent } from './recepty/recepty.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AddReceptaComponent } from './add-recepta/add-recepta.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+
+
+
 
 
 
@@ -19,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     LekarzeComponent,
     LekiComponent,
     PacjenciComponent,
-    ReceptyComponent
+    ReceptyComponent,
+    AddReceptaComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,10 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     MatToolbarModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
