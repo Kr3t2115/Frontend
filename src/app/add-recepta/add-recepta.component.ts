@@ -15,18 +15,7 @@ export class AddReceptaComponent  {
   baseURL ='http://127.0.0.1:3000/api/post'
 
 
-
-  krecie_imie = "szymogdfagn"
-  krecie_nazwisko = 'baranowicz'
-  kreci_wiek = 22
-
-  cos = {
-   imie: this.krecie_imie,
-   nazwisko: this.krecie_nazwisko,
-   wiek: this.kreci_wiek
-  }
-
-  modele = new User('imie','nzads','')
+  modele = new User('','','')
 
   constructor(private http: HttpClient) {}
   
