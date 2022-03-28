@@ -27,7 +27,7 @@ import {MatSelectModule} from '@angular/material/select';
     LekiComponent,
     PacjenciComponent,
     ReceptyComponent,
-    AddReceptaComponent
+    AddReceptaComponent,
   ],
   imports: [
     BrowserModule,

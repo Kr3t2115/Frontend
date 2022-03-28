@@ -1,13 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { User } from '../user';
 
-export class Person {
-  imie:string | undefined
-  nazwisko:string | undefined
-  name:string | undefined
-}
- 
 
 
 @Component({
@@ -15,21 +10,31 @@ export class Person {
   templateUrl: './add-recepta.component.html',
   styleUrls: ['./add-recepta.component.css']
 })
-export class AddReceptaComponent implements OnInit {
-
-  selected = 'option2';
+export class AddReceptaComponent  {
 
   baseURL ='http://127.0.0.1:3000/api/post'
 
-  constructor(private http: HttpClient) {}
-  ngOnInit(): void {
-  
-  
+
+
+  krecie_imie = "szymogdfagn"
+  krecie_nazwisko = 'baranowicz'
+  kreci_wiek = 22
+
+  cos = {
+   imie: this.krecie_imie,
+   nazwisko: this.krecie_nazwisko,
+   wiek: this.kreci_wiek
   }
 
-  getPeople(): Observable<Person[]> {
-    console.log('getPeople '+this.baseURL )
-    return this.http.get<Person[]>(this.baseURL + 'people')
+  modele = new User('imie','nzads','')
+
+  constructor(private http: HttpClient) {}
+  
+  daj() {
+    return this.http.post(this.baseURL, this.modele).toPromise().then(data =>{
+      console.log(data)
+    })
+    
   }
   
 }
