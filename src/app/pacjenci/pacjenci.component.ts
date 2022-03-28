@@ -22,8 +22,10 @@ export class PacjenciComponent implements OnInit {
 }
 szukaj() {
   this.filter = this.all.filter(
-    (all: { imie_pacjenta: string;}) =>
-    all.imie_pacjenta.toLowerCase().includes(this.szuakny_text.toLowerCase()) 
+    (all: { imie_pacjenta: string; pesel: string;nazw_pacjenta:string}) =>
+    all.imie_pacjenta.toLowerCase().includes(this.szuakny_text.toLowerCase()) ||
+    all.pesel.toLowerCase().includes(this.szuakny_text.toLowerCase()) ||
+    all.nazw_pacjenta.toLowerCase().includes(this.szuakny_text.toLowerCase()) 
   );
 }
 }

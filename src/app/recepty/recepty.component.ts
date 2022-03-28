@@ -35,7 +35,8 @@ szukaj() {
   this.filter = this.all.filter(
     (all) =>
     all.pesel.toLowerCase().includes(this.szuakny_text.toLowerCase()) ||
-    all.imie_pacjenta.toLowerCase().includes(this.szuakny_text.toLowerCase()),
+    all.imie_pacjenta.toLowerCase().includes(this.szuakny_text.toLowerCase()) ||
+    all.nazw_pacjenta.toLowerCase().includes(this.szuakny_text.toLowerCase()) 
 
   );
 }

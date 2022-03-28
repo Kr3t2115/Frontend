@@ -14,6 +14,8 @@ import { AddReceptaComponent } from './add-recepta/add-recepta.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import { AddPacjentComponent } from './add-pacjent/add-pacjent.component';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -28,6 +30,7 @@ import {MatSelectModule} from '@angular/material/select';
     PacjenciComponent,
     ReceptyComponent,
     AddReceptaComponent,
+    AddPacjentComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
     MatSelectModule
   ],
   providers: [],

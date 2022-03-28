@@ -17,9 +17,9 @@ autofocus
       
     </thead>
     <tbody>
-        <tr *ngFor="let leki of filter;let i = index"> 
+        <tr *ngFor="let leki of filter;"> 
             <td>
-              {{ i + 1}}
+              {{ leki.id_lekow}}
             </td>
             <td>
                 {{ leki.nazwa_leku}}

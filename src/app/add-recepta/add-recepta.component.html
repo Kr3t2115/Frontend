@@ -1,21 +1,28 @@
-<p>dziala jak cos</p>
+
+<h1>Dodaj recepte</h1>
 
 
-<form #userForm="ngForm">
+<mat-form-field appearance="fill">
+    <mat-label>Wybierz lekarza</mat-label>
+    <mat-select  [(ngModel)]="modele.lekarz">
+      <mat-option *ngFor="let lekarze of all" value="{{lekarze.id_lekarza}}">{{lekarze.imie_lekarza}} {{lekarze.naz_lekarza}}</mat-option>
+    </mat-select>
+</mat-form-field>
 
-    <pre>{{modele | json}}</pre>
+<mat-form-field appearance="fill">
+    <mat-label>Wybierz pacjenta</mat-label>
+    <mat-select  [(ngModel)]="modele.pacjent">
+      <mat-option *ngFor="let pacjenci of all_pacjent" value="{{pacjenci.id_pacjenta}}">{{pacjenci.imie_pacjenta}} {{pacjenci.nazw_pacjenta}}</mat-option>
+    </mat-select>
+</mat-form-field>
 
-    <div class="form-group">
-        <label>Imie</label>
-        <input type="text" name="imie" class="form-control" [(ngModel)]="modele.imie">
-    </div>
-    <div class="form-group">
-        <label>Nazwisko</label>
-        <input type="text" name="nazwisko" class="form-control" [(ngModel)]="modele.nazwisko">
-    </div>
-    <div class="form-group">
-        <label>Wiek</label>
-        <input type="text" name="wiek" class="form-control" [(ngModel)]="modele.pesel" maxlength="11">
-    </div>
-    <button (click)="daj()">Wyślij</button>
-</form>
+
+<mat-form-field appearance="fill">
+    <mat-label>Wybierz lek</mat-label>
+    <mat-select  [(ngModel)]="modele.lek">
+      <mat-option *ngFor="let leki of all_leki" value="{{leki.id_lekow}}">{{leki.nazwa_leku}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+
+<button mat-raised-button color="primary" (click)="daj()">Wyślij</button>

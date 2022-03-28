@@ -26,8 +26,10 @@ export class LekarzeComponent implements OnInit {
 }
 szukaj() {
   this.filter = this.all.filter(
-    (all: { imie_lekarza: string;}) =>
-    all.imie_lekarza.toLowerCase().includes(this.szuakny_text.toLowerCase()) 
+    (all: { imie_lekarza: string;naz_lekarza:string;spec_lekarza: string}) =>
+    all.imie_lekarza.toLowerCase().includes(this.szuakny_text.toLowerCase()) ||
+    all.naz_lekarza.toLowerCase().includes(this.szuakny_text.toLowerCase()) ||
+    all.spec_lekarza.toLowerCase().includes(this.szuakny_text.toLowerCase()) 
   );
 }
 }
