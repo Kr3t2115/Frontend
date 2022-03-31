@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes ,ActivatedRoute} from '@angular/router';
-
 import {LekarzeComponent} from './lekarze/lekarze.component';
 import {PacjenciComponent} from './pacjenci/pacjenci.component';
 import {LekiComponent} from './leki/leki.component';
